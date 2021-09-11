@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import "./Search.css";
 
 const UserCard = () => {
   const userData = useSelector((state) => state.userData);
@@ -9,7 +10,7 @@ const UserCard = () => {
       {userData.length > 0 ? (
         userData.map((val, index) => {
           return (
-            <div key={index}>
+            <div className="usrCard" key={index}>
               <div>{val.id}</div>
               <div>{val.name}</div>
               <div>{val.items.join(", ")}</div>
@@ -19,7 +20,7 @@ const UserCard = () => {
           );
         })
       ) : (
-        <div>No User Found</div>
+        <div className="usrCard">No User Found</div>
       )}
     </div>
   );

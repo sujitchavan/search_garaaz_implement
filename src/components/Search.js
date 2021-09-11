@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import UserCard from "./UserCard";
+import "./Search.css";
+
 const data = require("./data/Data.json");
 
 const Search = () => {
@@ -46,7 +48,7 @@ const Search = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       <div>
         <input
           type="text"
