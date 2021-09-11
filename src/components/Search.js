@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import UserCard from "./UserCard";
 const data = require("./data/Data.json");
 
 const Search = () => {
   const [user, setUser] = useState([]);
-  const [show, setShow] = useState([]);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     setUser(data);
@@ -32,22 +34,30 @@ const Search = () => {
         }
         return;
       });
-      event.target.value.length > 0 ? setShow(show) : setShow([]);
+      event.target.value.length > 0
+        ? dispatch({
+            type: "ADD_USER_DATA",
+            payload: show,
+          })
+        : dispatch({
+            type: "RESET_USER_DATA",
+          });
     }, 500);
   };
 
   return (
     <div>
-      <input
-        type="text"
-        placeholder="Search User by ID, Address, ..."
-        onChange={handleChange}
-        id="searchbar"
-      />
-      {show &&
-        show.map((val) => {
-          return <div>{val.name}</div>;
-        })}
+      <div>
+        <input
+          type="text"
+          placeholder="Search User by ID, Address, ..."
+          onChange={handleChange}
+          id="searchbar"
+        />
+      </div>
+      <div>
+        <UserCard />
+      </div>
     </div>
   );
 };
