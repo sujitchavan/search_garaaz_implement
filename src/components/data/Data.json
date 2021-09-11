@@ -1,0 +1,31 @@
+[{
+	"id": "1",
+	"name": "Ram",
+	"items": ["Dish", "Nut", "Bolt", "ParleG", "Samsung", "Apple"],
+	"address": "501, Sky High, Andheri, Mumbai",
+	"pincode": "411500"
+},{
+	"id": "2",
+	"name": "Lakhan",
+	"items": ["Mobile", "Bolt", "ParleG", "Samsung", "Apple"],
+	"address": "1001, Blue Hills, Nagar, Chennai",
+	"pincode": "41145"
+},{
+	"id": "3",
+	"name": "Rahul",
+	"items": ["Mobile", "Camera", "Dish", "Nut", "Bolt"],
+	"address": "101, Red Hills, Baner, Pune",
+	"pincode": "41145"
+},{
+	"id": "4",
+	"name": "Sid",
+	"items": ["Camera", "Dish", "Nut", "Bolt", "ParleG"],
+	"address": "606, High Building, South Delhi",
+	"pincode": "414141"
+},{
+	"id": "5",
+	"name": "Sujit",
+	"items": ["Mobile", "Camera", "ParleG", "Apple"],
+	"address": "202, Crosswinds, Baner, Pune",
+	"pincode": "41145"
+}]
