@@ -49,16 +49,16 @@ const Search = () => {
 
   return (
     <div className="container">
-      <div>
+      <div className="search-input">
         <input
           type="text"
           placeholder="Search User by ID, Address, ..."
           onChange={handleChange}
           id="searchbar"
         />
-      </div>
-      <div>
-        <UserCard />
+        <div className="user-box">
+          <UserCard />
+        </div>
       </div>
     </div>
   );
